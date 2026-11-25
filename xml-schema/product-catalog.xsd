@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Define element CATALOG -->
+  <xs:element name="CATALOG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PRODUCT" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SPECIFICATIONS" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+              <xs:element name="OPTIONS" type="xs:string" minOccurs="0"/>
+              <xs:element name="PRICE" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+              <xs:element name="NOTES" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+			  <xs:attribute name="NAME" type="xs:string" use="required"/>
+			  <xs:attribute name="CATEGORY" use="optional">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="HandTool"/>
+                  <xs:enumeration value="Table"/>
+                  <xs:enumeration value="Shop-Professional"/>
+                </xs:restriction>
+              </xs:simpleType>
+              </xs:attribute>
+              <xs:attribute name="PARTNUM" type="xs:string" use="required"/>
+              <xs:attribute name="PLANT" use="optional">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="Pittsburgh"/>
+                  <xs:enumeration value="Milwaukee"/>
+                  <xs:enumeration value="Chicago"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="INVENTORY" use="optional">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="InStock"/>
+                  <xs:enumeration value="Backordered"/>
+                  <xs:enumeration value="Discontinued"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define entities -->
+  <xs:attribute name="AUTHOR" type="xs:string"/>
+  <xs:attribute name="COMPANY" type="xs:string"/>
+  <xs:attribute name="EMAIL" type="xs:string"/>
+
+</xs:schema>

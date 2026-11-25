@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baby Shower Guest Registration</title>
+</head>
+
+<body>
+  <h1>Baby Shower Guest Registration</h1>
+
+  <!-- Filled in from announcement.txt with a jQuery AJAX request -->
+  <h2>Announcement</h2>
+  <div id="announcementBox">Click the button to load the announcement.</div>
+  <button id="loadAnnouncementBtn" type="button">Load Announcement</button>
+
+  <hr />
+
+  <h2>Register a Guest</h2>
+
+  <label for="guestName">Guest Name:</label>
+  <input id="guestName" type="text" placeholder="Enter full name" />
+  <p id="preview"></p>
+
+  <br /><br />
+
+<label for="mealChoice">Meal Choice:</label>
+<select id="mealChoice">
+  <option value="Chicken">Chicken</option>
+  <option value="Fish">Fish</option>
+  <option value="Vegetarian">Vegetarian</option>
+</select>
+
+<br /><br />
+
+  <button id="registerBtn" type="button">Register Guest</button>
+
+  <p id="statusMsg"></p>
+
+  <h2>Guest List</h2>
+
+<p>Guest Count: <span id="guestCount">0</span></p>
+
+<h3>Meal Totals</h3>
+<ul>
+  <li>Chicken: <span id="chickenCount">0</span></li>
+  <li>Fish: <span id="fishCount">0</span></li>
+  <li>Vegetarian: <span id="vegCount">0</span></li>
+</ul>
+
+<ul id="guestList"></ul>
+
+  <!-- jQuery MUST load before script.js -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

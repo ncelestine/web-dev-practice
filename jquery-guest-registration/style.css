@@ -1,0 +1,94 @@
+/* Basic page styling so it doesn't look plain */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f0f4ff; /* noticeable light blue */
+  min-height: 100vh;
+}
+
+/* Headings spacing */
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+/* Announcement box styling */
+#announcementBox {
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Inputs and dropdown */
+input, select {
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Register and Load Announcement buttons */
+#registerBtn,
+#loadAnnouncementBtn {
+  background-color: #4a90e2;
+  color: white;
+  margin-top: 10px;
+}
+
+#registerBtn:hover,
+#loadAnnouncementBtn:hover {
+  opacity: 0.9;
+}
+
+/* Remove button inside list items */
+.removeBtn {
+  margin-left: 10px;
+  background-color: #e74c3c;
+  color: white;
+}
+
+.removeBtn:hover {
+  opacity: 0.9;
+}
+
+/* Guest list spacing */
+#guestList li {
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  list-style-type: none;
+}
+
+/* Preview + status */
+#preview {
+  font-style: italic;
+  margin: 8px 0;
+  color: #444;
+}
+
+#statusMsg {
+  margin-top: 10px;
+  font-weight: bold;
+}
